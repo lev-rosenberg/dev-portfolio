@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import ProjectList from './components/projectList';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <div>
+        <h1>Lev Rosenberg</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hey! I’m Lev, I’m a fourth year at Northwestern studying comp sci & cog sci who wants to apply his technical skills towards mission-driven roles.
+          I am an experienced full-stack developer proficient with React, Redux, Next, Typescript, Cloud Firebase, and more. I also have extensive experience working with Python and C++.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
+      <ProjectList />
     </div>
   );
 }
