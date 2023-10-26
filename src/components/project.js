@@ -6,19 +6,23 @@ function Project(props) {
   const name = props.name
   const description = props.description
   const skills = props.skills
+  const image = props.image ? props.image : "https://fakeimg.pl/300x400?text=hey+bb+<3&font=lobster"
   return (
-    <div className="project">
-      <a href = {link} rel="noreferrer" target="_blank">
-        <h3 className='project-title'>{name}</h3>
-        <p>{description}</p>
-        <ul className='skills'>
-          {skills.map((skill) => 
-            <li>{skill}</li>
-          )}
-        </ul>
-      </a>
-      
-    </div>
+    <a href = {link} rel="noreferrer" target="_blank">
+      <div className="project">
+        <img src = {image} alt = ""></img>
+        <div className='project-info'>
+          <h3 className='project-title'>{name}</h3>
+          <p>{description}</p>
+          <ul className='skills'>
+            {skills.map((skill) => 
+              <li>{skill}</li>
+            )}
+          </ul>
+        </div>
+      </div>
+    </a>
+
   );
 }
 

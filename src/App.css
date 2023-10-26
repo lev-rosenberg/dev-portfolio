@@ -1,42 +1,17 @@
+/* FONT IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 0 20%;
-  height: 100vh;
+/* TAG CSS */
+body {
+  font-family: 'JetBrains Mono', 'Roboto', sans-serif;
 }
-
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.project-list {
-  display: flex;
-  flex-direction: column;
-  overflow-y: scroll;
-  padding: 5%;
-  gap: 1rem
-}
-
-.project {
-  display: flex;
-  flex-direction: column;
-  /* border: 1px solid rgba(91, 90, 90, 0.34); */
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgb(146, 142, 142);
-}
-.project:hover {
-  transition: ease-in-out 0.1s;
-  box-shadow: 0 0 10px rgb(146, 142, 142);
-}
-
-.project-title:hover {
-  transition: ease-in-out 0.1s;
-  color: rgb(91, 90, 90);
+img {
+  width: 40%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: inherit;
+  align-self: center;
 }
 
 a {
@@ -56,6 +31,62 @@ li {
   padding: 0.5%;
   margin: 1%
 }
+
+h1 {
+  font-size: 3rem;
+  margin: 5%;
+}
+
+/* CLASSES CSS */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 20%;
+  height: 100vh;
+  
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  gap: 1rem
+}
+
+.project {
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgb(146, 142, 142);
+  gap: 1rem;
+  height: 17.5vw;
+  padding: 2%;
+}
+.project:hover {
+  transition: ease-in-out 0.1s;
+  box-shadow: 0 0 10px rgb(146, 142, 142);
+}
+
+.project-title:hover {
+  transition: ease-in-out 0.1s;
+  color: rgb(91, 90, 90);
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1%;
+  width: 100%;
+}
+
 .skills {
   display: flex;
   flex-direction: row;
