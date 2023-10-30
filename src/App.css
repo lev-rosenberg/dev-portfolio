@@ -37,6 +37,11 @@ h1 {
   margin: 5%;
 }
 
+p {
+  font-size: 1em;
+  /* margin: 5%; */
+}
+
 /* CLASSES CSS */
 
 .App {
@@ -85,6 +90,7 @@ h1 {
   justify-content: space-evenly;
   padding: 1%;
   width: 100%;
+
 }
 
 .skills {
