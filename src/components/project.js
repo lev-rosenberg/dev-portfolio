@@ -14,7 +14,9 @@ function Project(props) {
   return (
     <a href = {link} rel="noreferrer" target="_blank">
       <div className="project">
-        <img src = {image} alt = ""></img>
+        <div style = {{width: "40%"}}>
+          <img src = {image} alt = ""></img>
+        </div>
         <div className='project-info'>
           <h3 className='project-title'>{name}</h3>
           <p>{description}</p>
