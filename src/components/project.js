@@ -7,6 +7,10 @@ function Project(props) {
   const description = props.description
   const skills = props.skills
   const image = props.image ? props.image : "https://fakeimg.pl/300x400?text=hey+bb+<3&font=lobster"
+  function handleClick() {
+    const skills_list = document.getElementsByClassName("skills")
+      skills_list.style.display = "none"
+  }
   return (
     <a href = {link} rel="noreferrer" target="_blank">
       <div className="project">
@@ -16,7 +20,7 @@ function Project(props) {
           <p>{description}</p>
           <ul className='skills'>
             {skills.map((skill) => 
-              <li>{skill}</li>
+              <li onClick = {handleClick}>{skill}</li>
             )}
           </ul>
         </div>

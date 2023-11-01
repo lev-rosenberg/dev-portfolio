@@ -51,13 +51,14 @@ p {
   text-align: center;
   margin: 0 20%;
   height: 100vh;
-  
 }
 
 .projects-container {
   display: flex;
   flex-direction: column;
 }
+
+
 
 .project-list {
   display: flex;
@@ -71,9 +72,12 @@ p {
   border-radius: 8px;
   box-shadow: 0 0 5px rgb(146, 142, 142);
   gap: 1rem;
-  height: 17.5vw;
+  min-height: 17.5vw;
+  max-height: fit-content;
   padding: 2%;
 }
+
+
 .project:hover {
   transition: ease-in-out 0.1s;
   box-shadow: 0 0 10px rgb(146, 142, 142);
@@ -99,4 +103,19 @@ p {
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .project {
+    flex-direction: column;
+    /* margin: 0 5%; */
+  }
+  .skills {
+    display: none;
+  }
+
+  .project-title {
+    margin: 0;
+  }
 }
