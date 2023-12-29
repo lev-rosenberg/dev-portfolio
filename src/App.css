@@ -5,8 +5,6 @@
 /* TAG CSS */
 body {
   font-family: 'JetBrains Mono', 'Roboto', sans-serif;
-  width: 100vw;
-  height: 100vh;
 }
 
 img {
@@ -50,13 +48,17 @@ p {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 100%;
-  height: 100%;}
+  width: 100vw;
+  height: 100vh;
+}
 
 .rain-screen {
   width: 100%;
   height: 100%;
-  overflow-y: hidden;
+}
+
+.rain-screen svg {
+  box-sizing: border-box;
 }
 
 .enter {

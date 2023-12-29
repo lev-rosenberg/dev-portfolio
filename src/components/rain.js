@@ -1,12 +1,27 @@
+import { useState, useEffect } from "react";
+
 function Rain(props) {
+
+  const [vw, setVw] = useState(Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0))
+  const [vh, setVh] = useState(Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0))
+  
+  useEffect(() => {
+    function handleResize() {
+      setVw(Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0))
+      setVh(Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0))
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   function circle(cx, cy) {
     const duration = (1 + Math.random() + Math.random()*2).toString() + "s"
     return (
-      <circle cx={cx} cy={cy} r = "1" fill="lightgrey" strokeWidth="0">
+      <circle cx={cx} cy={cy} r = "1" fill="lightgrey">
         <animate
           attributeName="cy"
-          from={cy-768}
+          from={cy-1000}
           to="100vh"
           dur={duration}
           repeatCount="indefinite"
@@ -26,8 +41,7 @@ function Rain(props) {
   function randomCircleList() {
     let list = []
     for (let i = 0; i < 3000; i++) {
-      list.push(circle(Math.random() * 1024, Math.random() * 768))
-      // list.push(circle(Math.random() * 1024, Math.random() * 768))
+      list.push(circle(Math.random() * vw, Math.random() * vh))
     }
     return list
   }
@@ -53,10 +67,10 @@ function Rain(props) {
     <div className="rain-screen">
       <button className = "enter" id = "enter-button" onClick = {loadScreen}>Enter</button>
       <svg xmlns="http://www.w3.org/2000/svg"
-        height="100%" width="100%"
-        viewBox="0 0 1000 1000"
+        width="100%" height="100%"
+        // viewBox= "0 0 1000 1000"
         preserveAspectRatio="xMidYMid meet">
-          <rect x="0" y="0" width="1024" height="768" fill = "black">
+          <rect width="100%" height="100%" fill = "black">
             <animate
               id = "background"
               attributeName="fill"
